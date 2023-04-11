@@ -10,19 +10,10 @@
 
 const listUl = document.querySelectorAll("#categories > li");
 console.log("Number of categories: " + listUl.length);
-const listH2El = document.querySelectorAll("#categories h2");
-console.log(listH2El);
-const listUlUl = document.querySelectorAll("#categories > li > ul");
-console.log(listUlUl);
-// const countEl = document.querySelectorAll("h2 + ul");
-// console.log(countEl.querySelectorAll(li));
-
-listUlUl.forEach(function (item2) {
-    let countEl = '';
-    let name = '';
-    listH2El.forEach(function (item1, index) {
-        countEl = document.querySelectorAll("li > ul");
-        name = item1.textContent;
-    
-  });console.log(`Category: ${name} Elements: ${countEl.length}`);
+listUl.forEach(function (item) {
+  const nameCategory = item.querySelector("h2");
+  const countEl = item.querySelectorAll("ul>li");
+  console.log(
+    `Category: ${nameCategory.textContent} Elements: ${countEl.length}`
+  );
 });
