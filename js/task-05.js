@@ -8,10 +8,13 @@
 
 let inputValue = document.querySelector("#name-input");
 
-const inputName = inputValue.value;
-
 const userName = document.querySelector("#name-output");
 
-userName.innerHTML = inputName;
-
 console.log(userName.innerHTML);
+
+inputValue.addEventListener("input", (event) => {
+  userName.textContent =
+    event.currentTarget.value.trim() === ""
+      ? "Anonymous"
+      : event.currentTarget.value;
+});
