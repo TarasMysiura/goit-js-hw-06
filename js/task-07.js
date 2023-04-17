@@ -8,11 +8,11 @@
 // <span id="text">Abracadabra!</span>
 
 const sizeInput = document.querySelector("#font-size-control");
-
 const textToChange = document.querySelector("#text");
 
-sizeInput.addEventListener("input", onRangeChange);
+textToChange.style.fontSize = "50px";
 
+sizeInput.addEventListener("input", onRangeChange);
 function onRangeChange(event) {
   textToChange.style.fontSize = `${event.currentTarget.value}px`;
 }

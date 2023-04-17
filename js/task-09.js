@@ -18,13 +18,11 @@ const changeColorBtn = document.querySelector(".change-color");
 const spanColor = document.querySelector(".color");
 const bodyEl = document.querySelector("body");
 
-changeColorBtn.addEventListener(
-  "click",
-  () => {
-    spanColor.textContent = getRandomHexColor();
-    bodyEl.style.backgroundColor = getRandomHexColor();
-  }
-);
+changeColorBtn.addEventListener("click", () => {
+  const randomColor = getRandomHexColor();
+  spanColor.textContent = randomColor;
+  bodyEl.style.backgroundColor = randomColor;
+});
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)

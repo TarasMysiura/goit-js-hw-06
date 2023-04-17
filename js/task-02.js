@@ -17,10 +17,12 @@ const ingredients = [
 
 const list = document.querySelector("#ingredients");
 
+const fragment = document.createDocumentFragment();
+
 ingredients.forEach(function (ingredient) {
   const item = document.createElement("li");
   item.textContent = ingredient;
-  list.append(item);  
+  fragment.appendChild(item);  
 });
-console.log(ingredients);
 
+list.append(fragment);
